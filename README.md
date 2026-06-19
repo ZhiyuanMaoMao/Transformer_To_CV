@@ -37,8 +37,11 @@ All three models were fine-tuned from ImageNet-pretrained weights using identica
 ## 2. Training Comparison
 
 <p align="center">
-  <img src="Charts/chart1_bubble.png" width="49%">
-  <img src="Charts/chart2_bars.png" width="49%">
+  <img src="Charts/chart1_bubble.png" width="85%">
+</p>
+
+<p align="center">
+  <img src="Charts/chart2_bars.png" width="85%">
 </p>
 
 Swin reaches the highest validation accuracy (96.32%) in a fraction of ConvNeXt's training time (79.6 vs 151.1 minutes). ViT trains the fastest by far (16.4 minutes) but trails about 2pp behind on accuracy. ConvNeXt's extra parameters and more than double the training time over Swin don't translate into a corresponding accuracy gain — a clear case of diminishing returns past a certain model capacity for this dataset size.
@@ -48,7 +51,7 @@ Swin reaches the highest validation accuracy (96.32%) in a fraction of ConvNeXt'
 ## 3. Capability Radar
 
 <p align="center">
-  <img src="Charts/chart3_radar.png" width="60%">
+  <img src="Charts/chart3_radar.png" width="85%">
 </p>
 
 No single architecture dominates across every dimension. Swin offers the most balanced profile — strong accuracy and stability without sacrificing too much speed. ViT wins decisively on speed and efficiency but gives up the most accuracy. ConvNeXt trades both speed and parameter efficiency for a marginal, and ultimately not very rewarding, stability gain.
@@ -58,7 +61,7 @@ No single architecture dominates across every dimension. Swin offers the most ba
 ## 4. Confusion Matrix — Best Model (Swin Transformer)
 
 <p align="center">
-  <img src="Charts/chart4_confusion_matrix.png" width="70%">
+  <img src="Charts/chart4_confusion_matrix.png" width="85%">
 </p>
 
 With 96.32% accuracy across 44 classes, the confusion matrix is strongly diagonal — Swin separates most categories cleanly. The remaining misclassifications are not spread randomly; they concentrate in a small number of visually similar classes, suggesting the residual error comes from genuine visual ambiguity between certain categories rather than a systemic weakness in the model.
